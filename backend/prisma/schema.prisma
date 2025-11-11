@@ -18,3 +18,16 @@ model User {
   email String  @unique
   name  String?
 }
+
+model Candidate {
+  id                Int      @id @default(autoincrement())
+  name              String
+  lastName          String
+  email             String
+  phone             String
+  address           String
+  education         String
+  workingExperience String
+  cvFilePath        String?
+  createdAt         DateTime @default(now())
+}
